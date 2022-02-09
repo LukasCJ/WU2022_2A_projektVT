@@ -24,10 +24,9 @@ ul {
 }
 
 header {
-    height: 8vh;
+    height: 13vh;
     display: flex;
     background-color: var(--color-primary);
-    border-bottom: 1px solid var(--color-secondary);
 }
 
 nav {
@@ -38,16 +37,18 @@ nav {
 #nav_left {
     width: 50%;
     justify-content: left;
+    margin-left: 19vw;
 }
 
 #nav_right {
     width: 50%;
     justify-content: right;
+    margin-right: 19vw;
 }
 
 .nav_item {
-    height: 75%;
-    width: 16%;
+    height: 6vh;
+    width: 8vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,14 +61,14 @@ nav {
 
 .nav_item:hover {
     background-color: var(--color-secondary-bright);
-    cursor: pointer
+    cursor: pointer;
 }
 
 #nav_left .nav_item {
-    margin-left: 10px
+    margin-left: 1vw;
 }
 #nav_right .nav_item {
-    margin-right: 10px
+    margin-right: 1vw;
 }
 
 .nav_item h2 {
@@ -99,12 +100,9 @@ main {
     justify-content: center;
     align-items: center;
     background-color: var(--color-primary);
+    border-top: 1px solid var(--color-secondary);
     border-bottom: 1px solid var(--color-secondary);
     box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px;
-}
-
-#recent .section_header {
-    border-top: 1px solid var(--color-secondary);
 }
 
 .section_header h1 {
