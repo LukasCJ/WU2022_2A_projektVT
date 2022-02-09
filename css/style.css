@@ -1,0 +1,48 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    height: 8vh;
+    width: 100vw;
+    display: flex;
+    background-color: aqua;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+#nav_left {
+    justify-content: left;
+    width: 50%;
+}
+
+#nav_right {
+    justify-content: right;
+    width: 50%;
+}
+
+.nav_item {
+    height: 80%;
+    width: 16%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+}
+
+#nav_left .nav_item {
+    margin-left: 10px
+}
+#nav_right .nav_item {
+    margin-right: 10px
+}
+
+.nav_item h2 {
+    
+}
