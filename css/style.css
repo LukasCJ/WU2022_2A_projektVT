@@ -15,6 +15,8 @@ body {
     --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --font-secondary: ;
     --border-radius: 4px;
+    --box-shadow-primary: rgba(0, 0, 0, 0.5)0px 0px 15px;
+    --box-shadow-secondary: rgba(0, 0, 0, 0.2) 0px 4px 12px;
     
     background-color: var(--color-primary);
 }
@@ -55,7 +57,7 @@ nav {
     background-color: var(--color-secondary);
     border-radius: var(--border-radius);
     text-decoration: none;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+    box-shadow: var(--box-shadow-secondary);
     transition: 0.2s;
 }
 
@@ -100,12 +102,16 @@ main {
     background-color: var(--color-primary);
     border-top: 1px solid var(--color-secondary);
     border-bottom: 1px solid var(--color-secondary);
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px;
+    box-shadow: var(--box-shadow-primary);
+}
+
+#popular .section_header { /* remove top shadow */
+
 }
 
 .section_header h1 {
     color: var(--color-secondary);
-    font-size: 3.8vh; /* Gör så att texten inte blir mindre än 1rem*/
+    font-size: 3.8vh; /* make text minimum size 1rem */
     font-family: var(--font-primary);
     text-transform: uppercase;
     letter-spacing: 0.3rem;
@@ -127,24 +133,21 @@ main {
     max-width: 11vw;
     min-height: auto;
     max-height: 16.5vw;
-    position: static;
     border-radius: var(--border-radius);
     border: 1px solid var(--color-primary);
     box-sizing: border-box;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+    box-shadow: var(--box-shadow-secondary);
     transition: 0.3s;
 }
 
 .poster_container img:hover {
-    /* max-width: 210px;
-    max-height: 310px; */
     border: 1px solid var(--color-secondary);
 }
 
-footer {
+footer { /* make move to bottom of page on thin screens*/
     height: 8vh;
     display: flex;
     background-color: var(--color-primary);
     border-top: 1px solid var(--color-secondary);
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px;
+    box-shadow: var(--box-shadow-primary);
 }
