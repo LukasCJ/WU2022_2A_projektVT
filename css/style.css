@@ -24,7 +24,7 @@ ul {
 }
 
 header {
-    height: 13vh;
+    height: 5vw;
     display: flex;
     background-color: var(--color-primary);
 }
@@ -37,17 +37,17 @@ nav {
 #nav_left {
     width: 50%;
     justify-content: left;
-    margin-left: 19vw;
+    margin-left: 20vw;
 }
 
 #nav_right {
     width: 50%;
     justify-content: right;
-    margin-right: 19vw;
+    margin-right: 20vw;
 }
 
 .nav_item {
-    height: 6vh;
+    height: 3vw;
     width: 8vw;
     display: flex;
     justify-content: center;
@@ -64,15 +64,13 @@ nav {
     cursor: pointer;
 }
 
-#nav_left .nav_item {
-    margin-left: 1vw;
-}
 #nav_right .nav_item {
     margin-right: 1vw;
 }
 
 .nav_item h2 {
     color: var(--color-primary);
+    font-size: 1.5vw;
     font-family: var(--font-primary);
     text-transform: uppercase;
     letter-spacing: 0.05rem;
@@ -107,6 +105,7 @@ main {
 
 .section_header h1 {
     color: var(--color-secondary);
+    font-size: 3.8vh; /* Gör så att texten inte blir mindre än 1rem*/
     font-family: var(--font-primary);
     text-transform: uppercase;
     letter-spacing: 0.3rem;
@@ -125,9 +124,9 @@ main {
 
 .poster_container img {
     min-width: auto;
-    max-width: 200px;
+    max-width: 11vw;
     min-height: auto;
-    max-height: 300px;
+    max-height: 16.5vw;
     position: static;
     border-radius: var(--border-radius);
     border: 1px solid var(--color-primary);
