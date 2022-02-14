@@ -15,39 +15,82 @@
     <title>Logsite</title>
 </head>
 <body>
-    <header>
-        <nav id="nav_left">
-            <a href="index.html" class="nav_item"><img src="img/logo.jpg" id="nav_logo" alt="website logo"></a>
-        </nav>
-        <nav id="nav_right">
-            <a id="log_button" class="nav_item"><h2>Log</h2></a>
-            <a href="browse.html" class="nav_item"><h2>Browse</h2></a>
-            <a href="profile.html" class="nav_item"><h2>Profile</h2></a>
-        </nav>
-    </header>
-    <main>
+    <div id="grid_wrapper">
+        <header>
+            <nav>
+                <div id="nav_left">
+                    <a href="index.html" id="nav_logo"><img src="img/logo.jpg" alt="website logo"></a>
+                </div>
+                <div id="nav_right">
+                    <a id="log_button" class="nav_item"><h2>Log</h2></a>
+                    <a href="browse.html" class="nav_item"><h2>Browse</h2></a>
+                    <a href="profile.html" class="nav_item"><h2>Profile</h2></a>
+                </div>
+            </nav>
+        </header>
         <section id="popular">
             <div class="section_header"><h1>Popular This Week</h1></div>
-            <ul class="poster_list" id="poster_list-popular"><!--posters should be automatically fed in thorugh some script-->
-                <li class="poster_container"><a href="series-breaking_bad-2008-season_5.html"><img src="img/metadata/posters/breaking_bad-2008.jpg"></a></li>
-                <li class="poster_container"><a href="game-hollow_knight-2017.html"><img src="img/metadata/posters/hollow_knight-2017.jpg"></a></li>
-                <li class="poster_container"><a href="film-the_big_lebowski-1998.html"><img src="img/metadata/posters/the_big_lebowski-1998.jpg"></a></li>
-                <li class="poster_container"><a href="series-breaking_bad-2008-season_2.html"><img src="img/metadata/posters/breaking_bad-2008.jpg"></a></li>
-                <li class="poster_container"><a href="game-breath_of_the_wild-2017.html"><img src="img/metadata/posters/breath_of_the_wild-2017.jpg"></a></li>
-                <li class="poster_container"></li>
-            </ul>
+            <div class="section_main">
+                <div class="scroll_button left"></div>
+                <ul class="list"><!--list-item elements should be automatically fed in thorugh some script-->
+                    <li class="scroll_page">
+                        <a href="type-name-year-misc_attributes.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
+                        <a href="type-name-year-misc_attributes.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
+                        <a href="type-name-year-misc_attributes.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
+                        <a href="type-name-year-misc_attributes.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
+                        <a href="type-name-year-misc_attributes.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
+                    </li>
+                    <li class="scroll_page">
+                        <a href="type-name-year-misc_attributes.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
+                        <a href="type-name-year-misc_attributes.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
+                        <a href="type-name-year-misc_attributes.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
+                        <a href="type-name-year-misc_attributes.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
+                        <a href="type-name-year-misc_attributes.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
+                    </li>
+                    <li class="scroll_page">
+                        <a href="type-name-year-misc_attributes.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
+                        <a href="type-name-year-misc_attributes.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
+                        <a href="type-name-year-misc_attributes.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
+                        <a href="type-name-year-misc_attributes.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
+                        <a href="type-name-year-misc_attributes.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
+                    </li>
+                </ul>
+                <div class="scroll_button right"></div>
+            </div>
         </section>
         <section id="recent">
             <div class="section_header"><h1>Recent Activity</h1></div>
-            <ul class="poster_list" id="poster_list-recent">
-                <li class="poster_container"><a href="series_mini-cowboy_bebop-1998.html"><img src="img/metadata/posters/cowboy_bebop-1998.jpg"></a></li>
-                <li class="poster_container"><a href="film-baby_driver-2017.html"><img src="img/metadata/posters/baby_driver-2017.jpg"></a></li>
-                <li class="poster_container"><a href="series-arrested_development-2003-season_3.html"><img src="img/metadata/posters/arrested_development-2003.jpg"></a></li>
-                <li class="poster_container"><a href="game-the_last_of_us_remastered-2014.html"><img src="img/metadata/posters/the_last_of_us_remastered-2014.jpg"></a></li>
-                <li class="poster_container"><a href="series-adventure_time-2010-season_8"><img src="img/metadata/posters/adventure_time-2010.jpg"></a></li>
-            </ul>
+            <div class="section_main">
+                <div class="scroll_button left"></div>
+                <ul class="list"><!--list-item elements should be automatically fed in thorugh some script-->
+                    <li class="scroll_page">
+                        <a href="type-name-year-misc_attributes.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
+                        <a href="type-name-year-misc_attributes.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
+                        <a href="type-name-year-misc_attributes.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
+                        <a href="type-name-year-misc_attributes.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
+                        <a href="type-name-year-misc_attributes.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
+                    </li>
+                    <li class="scroll_page">
+                        <a href="type-name-year-misc_attributes.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
+                        <a href="type-name-year-misc_attributes.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
+                        <a href="type-name-year-misc_attributes.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
+                        <a href="type-name-year-misc_attributes.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
+                        <a href="type-name-year-misc_attributes.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
+                    </li>
+                    <li class="scroll_page">
+                        <a href="type-name-year-misc_attributes.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
+                        <a href="type-name-year-misc_attributes.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
+                        <a href="type-name-year-misc_attributes.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
+                        <a href="type-name-year-misc_attributes.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
+                        <a href="type-name-year-misc_attributes.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
+                    </li>
+                </ul>
+                <div class="scroll_button right"></div>
+            </div>
         </section>
-    </main>
-    <footer></footer>
+        <footer>
+            <div class="nav_item"><h2>Contacts</h2></div>
+        </footer>
+    </div>
 </body>
 </html>
