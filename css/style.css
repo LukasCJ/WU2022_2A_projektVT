@@ -104,10 +104,6 @@ main {
     box-shadow: var(--box-shadow-primary);
 }
 
-#popular .section_header { /* remove top shadow */
-    /* clip-path: ; */
-}
-
 .section_header h1 {
     color: var(--color-secondary);
     font-size: 1.5rem;
@@ -116,24 +112,34 @@ main {
     letter-spacing: 0.3rem;
 }
 
+#popular .section_header { /* remove top shadow */
+    /* clip-path: ; */
+}
+
 .poster_list {
-    height: max-content;
+    height: 15.5rem;
+    width: 28.5rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-left: 20rem;
-    margin-right: 20rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.poster_list::-webkit-scrollbar {
+    /* width: 0; /* gömmer scrollbar men den tar fortfarande plats */
 }
 
 .poster_container {
     width: 9rem;
     height: 13.5rem;
+    margin-right: 0.5rem;
+    flex: none;
     display: flex;
     align-items: center;
     background-color: red; /* temporary */
     border-radius: var(--border-radius);
+    scroll-snap-align: start;
+    scroll-margin-left: 5rem;
 }
 
 .poster_container img {
