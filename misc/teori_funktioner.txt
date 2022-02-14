@@ -1,0 +1,7 @@
+Login-funktion - JavaScript
+https://www.youtube.com/watch?v=3GsKEtBcGTk
+Databas för användarkonton - PHP & MySQL ?
+https://www.youtube.com/results?search_query=how+to+make+a+website+with+user+accounts+using+PHP+and+Mysql
+Databas för metadata för filmer - ?
+Generera html element utefter data från olika konton samt metadata - jQuery ?
+https://www.geeksforgeeks.org/most-efficient-way-to-create-html-elements-using-jquery/
