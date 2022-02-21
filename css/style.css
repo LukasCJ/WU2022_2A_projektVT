@@ -33,10 +33,10 @@ body:hover {
     grid-template-columns: 100%;
     grid-template-rows: 5rem max-content max-content 5rem;
     grid-template-areas: 
-        "hed"
-        "pop"
-        "rec"
-        "foo"
+        "he"
+        "s1"
+        "s2"
+        "fo"
     ;
 }
 
@@ -45,7 +45,7 @@ ul {
 }
 
 header {
-    grid-area: hed;
+    grid-area: he;
     display: flex;
     justify-content: center;
     background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary), var(--color-primary), var(--color-primary-dark));
@@ -96,7 +96,7 @@ nav ul {
 
 .nav_item h2 {
     color: var(--color-primary);
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-family: var(--font-primary);
     text-transform: uppercase;
     margin: 0.5rem;
@@ -109,11 +109,11 @@ section {
 }
 
 #popular {
-    grid-area: pop;
+    grid-area: s1;
 }
 
 #recent {
-    grid-area: rec;
+    grid-area: s2;
 }
 
 .section_header {
@@ -145,7 +145,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary), var(--color-primary), var(--color-primary-dark));
+    background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary), var(--color-primary), var(--color-primary), var(--color-primary-dark));
 }
 
 .scroll_button {
@@ -176,7 +176,7 @@ section {
 }
 
 .list::-webkit-scrollbar {
-    /* height: 0; /* göm scroll */
+    height: 0; /* göm scroll */
 }
 
 #recent .list { /* extend so that footer reaches bottom */
@@ -215,11 +215,16 @@ section {
 }
 
 footer { /* gör till konstant höjd och fäst i botten av sidan, så att man inte kan skrolla förbi den. testa bl.a genom att göra skärmen smal*/
-    grid-area: foo;
+    grid-area: fo;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--color-primary);
     border-top: 1px solid var(--color-secondary);
     box-shadow: var(--box-shadow-primary);
+}
+
+
+#signup_form {
+    grid-area: s1;
 }
