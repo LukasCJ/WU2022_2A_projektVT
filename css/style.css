@@ -13,7 +13,7 @@ body {
     --color-tertiary: ;
     --color-error: red;
     --color-success: green;
-    --box-shadow-primary: rgba(0, 0, 0, 0.5)0px 0px 15px;
+    --box-shadow-primary: rgba(0, 0, 0, 0.5) 0px 0px 15px;
     --box-shadow-secondary: rgba(0, 0, 0, 0.2) 0px 4px 12px;
 
     --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -58,21 +58,18 @@ nav {
     align-items: center;
 }
 
-#nav_left {
-    width: 50%;
-    display: flex;
-    justify-content: left;
-}
-
 #nav_logo {
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
     background-color: var(--color-secondary);
+    display: flex;
+    flex: none;
+    justify-content: left;
 }
 
-#nav_right {
-    width: 50%;
+nav ul {
+    width: 100%;
     display: flex;
     justify-content: right;
 }
@@ -152,33 +149,21 @@ section {
 }
 
 .scroll_button {
-    width: 0; 
-    height: 0; 
+    width: 2rem; 
+    height: 6rem; 
     margin: 1rem;
-}
-
-.scroll_button.left {
-    border-top: 3rem solid transparent;
-    border-bottom: 3rem solid transparent; 
-    border-right: 2rem solid var(--color-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-secondary);
+    box-shadow: var(--box-shadow-secondary);
     transition: 0.2s;
+    border-radius: var(--border-radius);
 }
 
-.scroll_button.left:hover {
+.scroll_button:hover {
     cursor: pointer;
-    border-right: 2rem solid var(--color-secondary-bright);
-}
-
-.scroll_button.right {
-    border-top: 3rem solid transparent;
-    border-bottom: 3rem solid transparent; 
-    border-left: 2rem solid var(--color-secondary);
-    transition: 0.2s;
-}
-
-.scroll_button.right:hover {
-    cursor: pointer;
-    border-left: 2rem solid var(--color-secondary-bright);
+    background-color: var(--color-secondary-bright);
 }
 
 .list {  /* make scrollable by swiping */
