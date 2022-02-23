@@ -31,7 +31,10 @@
                 <a href="type-name-year-misc.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
                 <a href="type-name-year-misc.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
                 <a href="type-name-year-misc.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
-                <a href="popular-full" class="poster_container final"><h2>Show More</h2></a>
+                <a href="popular-full" class="poster_container final">
+                    <h1>+<h1>
+                    <h2>Show More</h2>
+                </a>
             </li>
         </ul>
         <div class="scroll_button"></div>
@@ -61,7 +64,10 @@
                 <a href="type-name-year-misc.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
                 <a href="type-name-year-misc.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
                 <a href="type-name-year-misc.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
-                <a href="recent-full.html" class="poster_container final"><h2>Show More</h2></a>
+                <a href="recent-full.html" class="poster_container final">
+                    <h1>+<h1>
+                    <h2>Show More</h2>
+                </a>
             </li>
         </ul>
         <div class="scroll_button"></div>
