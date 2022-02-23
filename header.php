@@ -20,7 +20,7 @@
                     <li><a href="profile.html" class="nav_item profile"><h2>Profile</h2></a></li>
                     <li><a href='signup.php' class="nav_item" id="sign_up"><h2>Sign up</h2></a></li> <!--HIDE-->
                     <li><a href='login.php' class="nav_item" id="log_in"><h2>Log in</h2></a></li> <!--HIDE-->
-                    <li class="nav_item" id="nav_close"><h2>Close Menu</h2></li>
+                    <li class="nav_item" id="nav_close"><h2>Close Menu</h2></li> <!--kan detta få en gemensam klass med 'Open Menu' knappen istället för dessa id:en?-->
                 </ul>
             </nav>
         </header>
