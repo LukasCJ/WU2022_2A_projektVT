@@ -11,15 +11,16 @@
 <body>
     <div id="grid_wrapper">
         <header>
-            <div class="nav_item" id="nav_op"><h2>Open</h2></div>
-            <nav>
+            <div class="nav_item" id="nav_op"><h2>Open Menu</h2></div>
+            <nav id="nav"> <!--id:et behövs för js. går det att göra utan? 'getElementsByTagName' och 'getElementByClassName' och 'querySelectorAll' funkar inte-->
                 <a href="index.html" id="nav_logo"><img src="img/logo.jpg" alt="website logo"></a>
                 <ul>
-                    <li><a id="log_button" class="nav_item"><h2>Log</h2></a></li>
+                    <li><a class="nav_item" id="log_button"><h2>Log</h2></a></li>
                     <li><a href="browse.html" class="nav_item"><h2>Browse</h2></a></li>
                     <li><a href="profile.html" class="nav_item profile"><h2>Profile</h2></a></li>
-                    <li><a href='signup.php' class="nav_item"><h2>Sign up</h2></a></li> <!--HIDE-->
-                    <li><a href='login.php' class="nav_item"><h2>Log in</h2></a></li> <!--HIDE-->
+                    <li><a href='signup.php' class="nav_item" id="sign_up"><h2>Sign up</h2></a></li> <!--HIDE-->
+                    <li><a href='login.php' class="nav_item" id="log_in"><h2>Log in</h2></a></li> <!--HIDE-->
+                    <li class="nav_item" id="nav_close"><h2>Close Menu</h2></li>
                 </ul>
             </nav>
         </header>
