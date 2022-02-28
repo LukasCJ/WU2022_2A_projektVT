@@ -10,7 +10,7 @@
 <section id="popular">
     <div class="section_header"><h1>Popular This Week</h1></div>
     <div class="section_main">
-        <div class="scroll_button"></div>
+        <div class="scroll_button" id="popular_scroll-left"></div>
         <ul class="list"><!--list-item elements should be automatically fed in thorugh some script-->
             <li class="scroll_page">
                 <a href="type-name-year-misc.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
@@ -37,7 +37,7 @@
                 </a>
             </li>
         </ul>
-        <div class="scroll_button"></div>
+        <div class="scroll_button" id="popular_scroll-right"></div>
     </div>
 </section>
 <section id="recent">

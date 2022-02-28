@@ -8,3 +8,14 @@ function toggleNav() {
 
 nav_op.addEventListener('click', toggleNav)
 nav_close.addEventListener('click', toggleNav)
+
+
+const popular_scroll_right = document.getElementById('popular_scroll-right');
+const popular_scroll_left = document.getElementById('popular_scroll-left');
+
+popular_scroll_left.onclick = function () {
+    document.querySelector('#popular .list').scrollLeft += 20;
+};
+popular_scroll_right.onclick = function () {
+    document.querySelector('#popular .list').scrollRight -= 20;
+};
