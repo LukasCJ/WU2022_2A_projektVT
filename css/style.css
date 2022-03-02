@@ -31,7 +31,7 @@ body:hover {
 #grid_wrapper {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 5rem max-content max-content max-content 5rem;
+    grid-template-rows: repeat(5, max-content);
     grid-template-areas: 
         "he"
         "fm"
@@ -86,7 +86,9 @@ nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 1.5rem;
     margin-left: 1rem;
+    margin-bottom: 1.5rem;
     background-color: var(--color-secondary);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow-secondary);
@@ -291,8 +293,8 @@ footer {
     nav {
         width: 100%;
         position: absolute;
-        top: -30rem;
-        height: 30rem;
+        top: -100vh;
+        height: 100vh;
         flex-direction: column;
         align-items: center;
         background-image: var(--color-gradient-secondary);
@@ -305,10 +307,11 @@ footer {
 
     .nav_item {
         width: 100%;
+        height: 4.5rem;
         border-radius: 0px;
     }
 
-    /* signup and login butttons are still taking up room */
+    /* signup and login butttons are still taking up room when hidden */
 
     nav ul {
         width: 100%;
@@ -318,8 +321,16 @@ footer {
         justify-content: space-evenly;
     }
 
+    nav ul .nav_item {
+        margin-top: 0;
+    }
+
     .nav-active {
-        transform: translateY(30rem);
+        transform: translateY(100vh);
+    }
+
+    grid-disable {
+        grid-template-rows: max-content repeat(4, 0px);
     }
 
     #nav_logo {
