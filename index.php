@@ -7,7 +7,7 @@
 
 <?php include_once 'header.php'; ?>
 
-<section id="popular">
+<section class="grid_item-switch" id="popular">
     <div class="section_header"><h1>Popular This Week</h1></div>
     <div class="section_main">
         <div class="scroll_button" id="popular_scroll-left"></div>
@@ -40,7 +40,7 @@
         <div class="scroll_button" id="popular_scroll-right"></div>
     </div>
 </section>
-<section id="recent">
+<section class="grid_item-switch" id="recent">
     <div class="section_header"><h1>Recent Activity</h1></div>
     <div class="section_main">
     <div class="scroll_button"></div>
