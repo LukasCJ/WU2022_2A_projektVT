@@ -1,6 +1,5 @@
 const nav = document.getElementById('nav')
-const nav_op = document.getElementById('nav_op')
-const nav_close = document.getElementById('nav_close')
+const nav_toggle = document.getElementsByClassName('toggle')
 
 const grid = document.getElementById('grid_wrapper') //funkar inte
 const grid_item = document.getElementsByClassName('grid_item-switch') //funkar inte
@@ -13,9 +12,7 @@ function toggleNav() {
     grid.classList.toggle('grid-inactive') //funkar inte
 }
 
-nav_op.addEventListener('click', toggleNav)
-nav_close.addEventListener('click', toggleNav)
-
+nav_toggle.addEventListener('click', toggleNav)
 
 
 const popular_scroll_right = document.getElementById('popular_scroll-right');

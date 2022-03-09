@@ -74,4 +74,8 @@
     </div>
 </section>
 
+<script>
+    const nav_toggle = document.getElementsByClassName('toggle')
+</script>
+
 <?php include_once 'footer.php' ?>

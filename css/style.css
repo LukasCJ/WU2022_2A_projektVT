@@ -109,7 +109,7 @@ h2 {
     margin: 1rem;
 }
 
-#nav_op, #nav_close {
+.nav_item.toggle {
     display: none;
 }
 
@@ -276,11 +276,7 @@ footer {
 
 @media screen and (max-width: 800px) {
 
-    #nav_op {
-        display: flex;
-    }
-
-    #nav_close {
+    .nav_item.toggle {
         display: flex;
     }
 
