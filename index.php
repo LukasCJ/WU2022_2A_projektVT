@@ -7,11 +7,11 @@
 
 <?php include_once 'header.php'; ?>
 
-<section class="grid_item-switch" id="popular">
+<section id="popular">
     <div class="section_header"><h1>Popular This Week</h1></div>
     <div class="section_main">
         <div class="scroll_button" id="popular_scroll-left"></div>
-        <ul class="list"><!--list-item elements should be automatically fed in thorugh some script-->
+        <ul class="list" id="popular_list"> <!--gör utan id-->
             <li class="scroll_page">
                 <a href="type-name-year-misc.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
                 <a href="type-name-year-misc.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
@@ -40,11 +40,11 @@
         <div class="scroll_button" id="popular_scroll-right"></div>
     </div>
 </section>
-<section class="grid_item-switch" id="recent">
+<section id="recent">
     <div class="section_header"><h1>Recent Activity</h1></div>
     <div class="section_main">
     <div class="scroll_button"></div>
-        <ul class="list"><!--list-item elements should be automatically fed in thorugh some script-->
+        <ul class="list" id="recent_list"> <!--gör utan id-->
             <li class="scroll_page">
                 <a href="type-name-year-misc.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
                 <a href="type-name-year-misc.html" class="poster_container"><img src="img/metadata/posters/name-year.jpg"></a>
@@ -73,9 +73,5 @@
         <div class="scroll_button"></div>
     </div>
 </section>
-
-<script>
-    const nav_toggle = document.getElementsByClassName('toggle')
-</script>
 
 <?php include_once 'footer.php' ?>

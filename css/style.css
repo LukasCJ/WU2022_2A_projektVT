@@ -60,6 +60,7 @@ nav {
     width: calc(5*9rem + 4*0.5rem);
     display: flex;
     align-items: center;
+    transition: all ease 0.5s;
 }
 
 #nav_logo {
@@ -109,7 +110,7 @@ h2 {
     margin: 1rem;
 }
 
-.nav_item.toggle {
+#nav_op, #nav_close {
     display: none;
 }
 
@@ -123,16 +124,12 @@ section {
     align-items: center;
 }
 
-#popular {
+#popular, #signup_form, #login_form {
     grid-area: s1;
 }
 
 #recent { /* gör så att storleken får footern att alltid nå botten */
     grid-area: s2;
-}
-
-#signup_form, #login_form {
-    grid-area: fm;
 }
 
 .section_header {
@@ -173,7 +170,7 @@ section {
     justify-content: center;
     background-color: var(--color-secondary);
     box-shadow: var(--box-shadow-secondary);
-    transition: 0.2s;
+    transition: background-color ease 0.2s;
     border-radius: var(--border-radius);
     flex: none;
 }
@@ -276,7 +273,7 @@ footer {
 
 @media screen and (max-width: 800px) {
 
-    .nav_item.toggle {
+    #nav_op, #nav_close {
         display: flex;
     }
 
