@@ -22,11 +22,11 @@
             <nav>
                 <a href="index.html" id="nav_logo"><img src="img/logo.jpg" alt="website logo"></a>
                 <ul>
-                    <li><a class="nav_item" id="log_button"><h2>Log</h2></a></li>
-                    <li><a href="browse.html" class="nav_item"><h2>Browse</h2></a></li>
-                    <li><a href="profile.html" class="nav_item profile"><h2>Profile</h2></a></li>
-                    <li><a href="signup.html" class="nav_item logged_out"><h2>Sign up</h2></a></li> <!--HIDE-->
-                    <li><a href="login.html" class="nav_item logged_out"><h2>Log in</h2></a></li> <!--HIDE-->
+                    <li class="nav_item" id="log_button"><h2>Log</h2></li>
+                    <li class="nav_item"><a href="browse.html"><h2>Browse</h2></a></li>
+                    <li class="nav_item profile logged_in"><a href="profile.html" ><h2>Profile</h2></a></li> <!--Profile class will allow dropdown menu-->
+                    <li class="nav_item logged_out"><a href="signup.html"><h2>Sign up</h2></a></li>
+                    <li class="nav_item logged_out"><a href="login.html" ><h2>Log in</h2></a></li>
                     <li class="nav_item" id="nav_close"><h2>Close Menu</h2></li>
                 </ul>
             </nav>
@@ -34,7 +34,7 @@
         <section id="popular">
             <div class="section_header"><h1>Popular This Week</h1></div>
             <div class="section_main">
-                <ul class="content_list">
+                <ul class="content_list"> <!--make scrollable by mousewheel-->
                     <li class="poster_container"><a href="type-name-year-misc.html"><img src="img/metadata/posters/name-year.jpg"></a></li>
                     <li class="poster_container"><a href="type-name-year-misc.html"><img src="img/metadata/posters/name-year.jpg"></a></li>
                     <li class="poster_container"><a href="type-name-year-misc.html"><img src="img/metadata/posters/name-year.jpg"></a></li>
@@ -81,7 +81,7 @@
                 </ul>
             </div>
         </section>
-        <footer>
+        <footer class="grid_item_switch">
             <ul>
                 <li class="nav_item"><a href="about.html"><h2>About</h2></a></li>
                 <li class="nav_item"><a href="contacts.html"><h2>Contacts</h2></a></li>
