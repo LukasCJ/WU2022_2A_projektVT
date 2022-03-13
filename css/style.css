@@ -45,6 +45,18 @@ body:hover {
     ;
 }
 
+#browse_grid_wrapper {
+    display: grid;
+    grid-template-columns: ;
+    grid-template-rows: ;
+    grid-template-areas: 
+        "he he"
+        "ca fm"
+        "ca fm"
+        "fo fo"
+    ;
+}
+
 a {
     text-decoration: none;
 }
@@ -391,4 +403,13 @@ footer ul {
         display: none;
     }
 
+    .poster_container.final h1 {
+        font-size: 1.5rem;
+    }
+
+    .poster_container h2 {
+        font-size: 0.7rem;
+    }
+
 }
+
