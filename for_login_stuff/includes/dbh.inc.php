@@ -7,7 +7,7 @@ $dBName == "logsite";
 
 $conn = mysqli_connect($serverName, $dBUsername, $dBPassword, $dBName);
 
-if (!conn) { //if connection fails
+if (!$conn) { //if connection fails
     die("Connection failed: " . mysqli_connect_error());
 }
 

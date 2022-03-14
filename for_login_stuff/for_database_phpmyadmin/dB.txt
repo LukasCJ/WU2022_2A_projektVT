@@ -2,7 +2,7 @@ database name: "logsite"
 
 SQL:
 CREATE TABLE users (
-    usersId int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,  //autogenerate, let gaps be
+    usersId int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,  //autogenerates, let gaps be, don't edit
     usersName varchar(128) NOT NULL,
     usersEmail varchar(128) NOT NULL,
     usersUid varchar(128) NOT NULL,
