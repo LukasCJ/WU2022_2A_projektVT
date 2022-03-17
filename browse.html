@@ -1,3 +1,10 @@
+<!-----todo----->
+
+
+
+
+<!-----code----->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,35 +18,81 @@
 <body>
     <div id="browse_grid_wrapper">
         <header>
-            <div class="nav_item" id="nav_op"><h2>Open Menu</h2></div>
+            <div class="nav_item" id="nav_op"><p>Open Menu</p></div>
             <nav>
                 <a href="index.html" id="nav_logo"><img src="img/logo.jpg" alt="website logo"></a>
                 <ul>
-                    <li class="nav_item" id="log_button"><h2>Log</h2></li>
-                    <li class="nav_item"><a href="browse.html"><h2>Browse</h2></a></li>
-                    <li class="nav_item profile logged_in"><a href="profile.html" ><h2>Profile</h2></a></li> <!--Profile class will allow dropdown menu-->
-                    <li class="nav_item logged_out"><a href="signup.html"><h2>Sign up</h2></a></li>
-                    <li class="nav_item logged_out"><a href="login.html" ><h2>Log in</h2></a></li>
-                    <li class="nav_item" id="nav_close"><h2>Close Menu</h2></li>
+                    <li class="nav_item" id="log_button"><p>Log</p></li>
+                    <li class="nav_item"><a href="browse.html"><p>Browse</p></a></li>
+                    <li class="nav_item" id="profile_button"><a href="profile.html"><p>Profile</p></a></li>
+                    <li class="nav_item"><a href="signup.html"><p>Sign up</p></a></li>
+                    <li class="nav_item"><a href="login.html"><p>Log in</p></a></li>
+                    <li class="nav_item" id="nav_close"><p>Close Menu</p></li>
                 </ul>
             </nav>
         </header>
         <section id="categories">
-            <ul>
-                <li>
-                    <ul><li></li><a href=""></a></ul></li>
-            </ul>
+            <div class="section_header"><h2>Categories</h2></div>
+            <div class="section_main">
+                <ul class="category_list">
+                    <li class="category video" id="category_video"> <!--vanligtvis visar bara video, men när du hovrar så fälls subkategorierna ned--> <!--temporärt id-->
+                        <h3>Video</h3>
+                        <ul id="video_sub"> <!--temporärt id-->
+                            <li><a href="#"><h3>Feature Films</h3></a></li>
+                            <li class="subcategory_line"></li>
+                            <li><a href="#"><h3>Shorts</h3></a></li>
+                            <li class="subcategory_line"></li>
+                            <li><a href="#"><h3>Series</h3></a></li>
+                            <li class="subcategory_line"></li>
+                            <li><a href="#"><h3>Mini-Series</h3></a></li>
+                        </ul>
+                    </li>
+                    <li class="category games"><a href="#"><h3>Games</h3></a></li>
+                    <li class="category music">
+                        <h3>Music</h3>
+                        <ul>
+                            <li><a href="#"><h3>Songs</h3></a></li>
+                            <li class="subcategory_line"></li>
+                            <li><a href="#"><h3>Singles</h3></a></li>
+                            <li class="subcategory_line"></li>
+                            <li><a href="#"><h3>Albums</h3></a></li>
+                        </ul>
+                    </li>
+                    <li class="category books">
+                        <h3>Books</h3>
+                        <ul>
+                            <li><a href="#"><h3>Novels</h3></a></li>
+                            <li class="subcategory_line"></li>
+                            <li><a href="#"><h3>Short Stories</h3></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </section>
-        <section id="featured_reviews">
-
-        </section>
-        <section id="featured_members">
-
+        <section id="featured"><!--reviews and members-->
+            <div class="section_header"><h2>Featured</h2></div>
+            <div class="section_main">
+                <ul class="featured_list reviews">
+                    <li><h3>Reviews</h3></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li><a href=""><p>More</p></a></li>
+                </ul>
+                <ul class="featured_list lists">
+                    <li><h3>Lists</h3></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li><a href=""><p>More</p></a></li>
+                </ul>
+            </div>
         </section>
         <footer>
             <ul>
-                <li class="nav_item"><a href="about.html"><h2>About</h2></a></li>
-                <li class="nav_item"><a href="contacts.html"><h2>Contacts</h2></a></li>
+                <li class="nav_item"><a href="about.html"><p>About</p></a></li>
+                <li class="nav_item"><a href="contacts.html"><p>Contacts</p></a></li>
             </ul>
         </footer>
     </div>

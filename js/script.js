@@ -16,3 +16,21 @@ function closeNav() {
 
 nav_op.addEventListener('click', openNav);
 nav_close.addEventListener('click', closeNav);
+
+
+const category = document.getElementsByClassName('category');
+const subcategories = document.getElementsByClassName('');
+
+function subcategoryDrop() {
+    subcategories.classList.toggle('')
+}
+
+
+const category_video = document.getElementById('category_video');
+const video_sub = document.getElementById('video_sub');
+
+function subcategoryDropBad() {
+    video_sub.classList.toggle('subcategories-active')
+}
+
+category_video.addEventListener('mouseover', subcategoryDropBad);
