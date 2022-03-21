@@ -18,19 +18,22 @@ nav_op.addEventListener('click', openNav);
 nav_close.addEventListener('click', closeNav);
 
 
-const category = document.getElementsByClassName('category');
-const subcategories = document.getElementsByClassName('');
+const cat_full_vid = document.getElementById('category_full-video');
+const cat_full_mu = document.getElementById('category_full-music');
+const cat_full_bks = document.getElementById('category_full-books');
 
-function subcategoryDrop() {
-    subcategories.classList.toggle('')
+function openSubsVid() {
+    cat_full_vid.classList.toggle('subcategory-active');
 }
 
-
-const category_video = document.getElementById('category_video');
-const video_sub = document.getElementById('video_sub');
-
-function subcategoryDropBad() {
-    video_sub.classList.toggle('subcategories-active')
+function openSubsMu() {
+    cat_full_mu.classList.toggle('subcategory-active');
 }
 
-category_video.addEventListener('mouseover', subcategoryDropBad);
+function openSubsBks() {
+    cat_full_bks.classList.toggle('subcategory-active');
+}
+
+cat_full_vid.addEventListener('click', openSubsVid);
+cat_full_mu.addEventListener('click', openSubsMu);
+cat_full_bks.addEventListener('click', openSubsBks);

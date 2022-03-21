@@ -35,35 +35,30 @@
             <div class="section_header"><h2>Categories</h2></div>
             <div class="section_main">
                 <ul class="category_list">
-                    <li class="category video" id="category_video"> <!--vanligtvis visar bara video, men när du hovrar så fälls subkategorierna ned--> <!--temporärt id-->
-                        <h3>Video</h3>
-                        <ul id="video_sub"> <!--temporärt id-->
-                            <li><a href="#"><h3>Feature Films</h3></a></li>
-                            <li class="subcategory_line"></li>
-                            <li><a href="#"><h3>Shorts</h3></a></li>
-                            <li class="subcategory_line"></li>
-                            <li><a href="#"><h3>Series</h3></a></li>
-                            <li class="subcategory_line"></li>
-                            <li><a href="#"><h3>Mini-Series</h3></a></li>
+                    <li class="category video"> <!--vanligtvis visar bara video, men när du hovrar så fälls subkategorierna ned-->
+                        <div class="category_full" id="category_full-video"><h3>Video</h3></div>
+                        <ul class="subcategories">
+                            <li class="nav_item"><a href="#"><p>Feature Films</p></a></li>
+                            <li class="nav_item"><a href="#"><p>Shorts</p></a></li>
+                            <li class="nav_item"><a href="#"><p>Series</p></a></li>
+                            <li class="nav_item"><a href="#"><p>Mini-Series</p></a></li>
                         </ul>
                     </li>
-                    <li class="category games"><a href="#"><h3>Games</h3></a></li>
+                    <li class="category games"><a href="#" class="category_full"><h3>Games</h3></a></li>
                     <li class="category music">
-                        <h3>Music</h3>
-                        <ul>
-                            <li><a href="#"><h3>Songs</h3></a></li>
-                            <li class="subcategory_line"></li>
-                            <li><a href="#"><h3>Singles</h3></a></li>
-                            <li class="subcategory_line"></li>
-                            <li><a href="#"><h3>Albums</h3></a></li>
+                        <div class="category_full" id="category_full-music"><h3>Music</h3></div>
+                        <ul class="subcategories">
+                            <li class="nav_item"><a href="#"><p>Songs</p></a></li>
+                            <li class="nav_item"><a href="#"><p>Singles</p></a></li>
+                            <li class="nav_item"><a href="#"><p>Albums</p></a></li>
                         </ul>
                     </li>
                     <li class="category books">
-                        <h3>Books</h3>
-                        <ul>
-                            <li><a href="#"><h3>Novels</h3></a></li>
-                            <li class="subcategory_line"></li>
-                            <li><a href="#"><h3>Short Stories</h3></a></li>
+                        <div class="category_full" id="category_full-books"><h3>Books</h3></div>
+                        <ul class="subcategories">
+                            <li class="nav_item"><a href="#"><p>Novels</p></a></li>
+                            <li class="nav_item"><a href="#"><p>Short Stories</p></a></li>
+                            <li class="nav_item"><a href="#"><p>Other</p></a></li>
                         </ul>
                     </li>
                 </ul>
