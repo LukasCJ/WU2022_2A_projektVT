@@ -8,25 +8,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300&display=swap" rel="stylesheet">
     <title>Logsite</title>
 </head>
-
 <body>
     <div id="grid_wrapper">
         <header>
-            <div class="nav_item" id="nav_op"><h2>Open Menu</h2></div>
+            <div class="nav_item" id="nav_op"><p>Open Menu</p></div>
             <nav>
                 <a href="index.html" id="nav_logo"><img src="img/logo.jpg" alt="website logo"></a>
                 <ul>
-                    <li><a class="nav_item" id="log_button"><h2>Log</h2></a></li>
-                    <li><a href="browse.html" class="nav_item"><h2>Browse</h2></a></li>
-                    <li><a href="profile.html" class="nav_item profile"><h2>Profile</h2></a></li>
-                    <li><a href="signup.html" class="nav_item logged_out"><h2>Sign up</h2></a></li> <!--HIDE-->
-                    <li><a href="login.html" class="nav_item logged_out"><h2>Log in</h2></a></li> <!--HIDE-->
-                    <li class="nav_item" id="nav_close"><h2>Close Menu</h2></li>
+                    <li class="nav_item" id="log_button"><p>Log</p></li>
+                    <li class="nav_item"><a href="browse.html"><p>Browse</p></a></li>
+                    <li class="nav_item" id="profile_button"><a href="profile.html"><p>Profile</p></a></li>
+                    <li class="nav_item"><a href="signup.html"><p>Sign up</p></a></li>
+                    <li class="nav_item"><a href="login.html"><p>Log in</p></a></li>
+                    <li class="nav_item" id="nav_close"><p>Close Menu</p></li>
                 </ul>
             </nav>
         </header>
         <section id="signup_form">
-            <div class="section_header"><h1>Sign Up</h1></div>
+            <div class="section_header"><h2>Sign Up</h2></div>
             <div class="section_main">
                 <form action="includes/signup.inc.php" method="post">
                     <input type="text" name="name" placeholder="Full Name...">
@@ -34,14 +33,14 @@
                     <input type="text" name="uid" placeholder="Username..">
                     <input type="password" name="pwd" placeholder="Password..">
                     <input type="password" name="pwdre" placeholder="Repeat Password...">
-                    <button type="submit" name="submit">Sign Up</button>
+                    <button type="submit" name="submit"><p>Sign Up</p></button>
                 </form>
             </div>
         </section>
         <footer>
             <ul>
-                <li class="nav_item"><a href="about.html"><h2>About</h2></a></li>
-                <li class="nav_item"><a href="contacts.html"><h2>Contacts</h2></a></li>
+                <li class="nav_item"><a href="about.html"><p>About</p></a></li>
+                <li class="nav_item"><a href="contacts.html"><p>Contacts</p></a></li>
             </ul>
         </footer>
     </div>
