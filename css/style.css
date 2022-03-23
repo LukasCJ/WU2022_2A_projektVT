@@ -406,9 +406,9 @@ footer .nav_item:first-child {
     grid-template-columns: calc(100% - var(--poster-width-primary)*2.4) calc(var(--poster-width-primary)*2.4);
     grid-template-rows: repeat(3, max-content);
     grid-template-areas: 
-        "he ft"
+        "he he"
         "ca ft"
-        "fo ft"
+        "fo fo"
     ;
 }
 
@@ -419,12 +419,6 @@ footer .nav_item:first-child {
 #browse_grid_wrapper nav {
     width: 100%;
     padding: 0 var(--gap-third) 0 var(--gap-third);
-    overflow-x: hidden;
-}
-
-#browse_grid_wrapper .section_header { /* lägger section_header'n över #featured. funkar inte helt bra */
-    width: calc(100% + 1px);
-    z-index: 1;
 }
 
 #categories .section_main {
@@ -494,11 +488,6 @@ footer .nav_item:first-child {
 
 #featured {
     grid-area: ft;
-    z-index: 0; /* lägger delen under section_header'n */
-}
-
-#featured .section_header {
-    display: none;
 }
 
 #featured .section_main {
@@ -507,12 +496,8 @@ footer .nav_item:first-child {
     border-left: 1px solid var(--color-secondary);
 }
 
-#featured h2 {
-    margin-top: var(--gap-third);
-}
-
 #featured h3 {
-    margin: var(--gap-primary) 0 var(--gap-secondary) 0;
+    margin: var(--gap-primary) 0 var(--gap-primary) 0;
 }
 
 #featured .nav_item {
@@ -656,13 +641,10 @@ button p {
             "fo"
     }
 
-    #featured .section_header {
-        display: flex;
-    }
-
     #featured .section_main {
         border-left: none;
         background-image: var(--color-gradient-primary);
+        padding: 0 var(--gap-third) 0 var(--gap-third);
     }
     
     .featured_list {
@@ -670,23 +652,36 @@ button p {
         background-color: transparent;
         overflow-y: auto;
         scroll-snap-type: none;
+        margin: 0;
         padding: 0;
         border-radius: none;
         border: none;
     }
+
+    .featured_list .review_container {
+        margin-bottom: var(--gap-secondary);
+    }
     
-    .featured_list li:last-child {
+    .featured_list .review_container:last-child {
         margin-bottom: 0;
     }
 
-    #featured .section_main > h3, #featured .nav_item {
+    #featured .section_main > h3 {
         margin: var(--gap-secondary) 0 var(--gap-secondary) 0;
     }
 
+    #featured .nav_item {
+        margin: var(--gap-secondary) 0 var(--gap-third) 0;
+        border-radius: var(--border-radius);
+    }
+
     footer .nav_item {
-        width: 50%;
-        margin: 0;
-        clip-path: inset(-10px 0 -10px 0); /* removes side box-shadow */
+        width: 50%;  
+        clip-path: inset(-10px 0 -10px 0); /* tar bort box-shadow på sidorna */
+    }
+
+    footer .nav_item:first-child {
+        margin-right: 0;
     }
 
     footer .nav_item a {
