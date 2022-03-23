@@ -15,82 +15,100 @@
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300&display=swap" rel="stylesheet">
     <title>Logsite</title>
 </head>
+
 <body>
+
     <div id="browse_grid_wrapper">
+
         <header>
-            <div class="nav_item" id="nav_op"><p>Open Menu</p></div>
+            <div class="nav_item linkless" id="nav_op"><p>Open Menu</p></div>
             <nav>
                 <a href="index.html" id="nav_logo"><img src="img/logo.jpg" alt="website logo"></a>
                 <ul>
-                    <li class="nav_item" id="log_button"><p>Log</p></li>
+                    <li class="nav_item"><a href="log.html"><p>Log</p></a></li>
                     <li class="nav_item"><a href="browse.html"><p>Browse</p></a></li>
-                    <li class="nav_item" id="profile_button"><a href="profile.html"><p>Profile</p></a></li>
+                    <li class="nav_item"><a href="profile.html"><p>Profile</p></a></li>
                     <li class="nav_item"><a href="signup.html"><p>Sign up</p></a></li>
                     <li class="nav_item"><a href="login.html"><p>Log in</p></a></li>
-                    <li class="nav_item" id="nav_close"><p>Close Menu</p></li>
+                    <li class="nav_item linkless" id="nav_close"><p>Close Menu</p></li>
                 </ul>
             </nav>
         </header>
+
         <section id="categories">
             <div class="section_header"><h2>Categories</h2></div>
             <div class="section_main">
                 <ul class="category_list">
-                    <li class="category video"> <!--vanligtvis visar bara video, men när du hovrar så fälls subkategorierna ned-->
-                        <div class="category_full" id="category_full-video"><h3>Video</h3></div>
+                    <li class="category all"><a href="#" class="category_full"><h3>All</h3></a></li>
+                    <li class="category movies"> <!--vanligtvis visar bara video, men när du hovrar så fälls subkategorierna ned-->
+                        <div class="category_full" id="category_full-movies"><h3>Movies...</h3></div>
                         <ul class="subcategories">
                             <li class="nav_item"><a href="#"><p>Feature Films</p></a></li>
                             <li class="nav_item"><a href="#"><p>Shorts</p></a></li>
-                            <li class="nav_item"><a href="#"><p>Series</p></a></li>
-                            <li class="nav_item"><a href="#"><p>Mini-Series</p></a></li>
+                        </ul>
+                    </li>
+                    <li class="category series">
+                        <div class="category_full" id="category_full-series"><h3>Series...</h3></div>
+                        <ul class="subcategories">
+                            <li class="nav_item"><a href="#"><p>Multi-season</p></a></li>
+                            <li class="nav_item"><a href="#"><p>Mini-series</p></a></li>
                         </ul>
                     </li>
                     <li class="category games"><a href="#" class="category_full"><h3>Games</h3></a></li>
-                    <li class="category music">
-                        <div class="category_full" id="category_full-music"><h3>Music</h3></div>
-                        <ul class="subcategories">
-                            <li class="nav_item"><a href="#"><p>Songs</p></a></li>
-                            <li class="nav_item"><a href="#"><p>Singles</p></a></li>
-                            <li class="nav_item"><a href="#"><p>Albums</p></a></li>
-                        </ul>
-                    </li>
-                    <li class="category books">
-                        <div class="category_full" id="category_full-books"><h3>Books</h3></div>
-                        <ul class="subcategories">
-                            <li class="nav_item"><a href="#"><p>Novels</p></a></li>
-                            <li class="nav_item"><a href="#"><p>Short Stories</p></a></li>
-                            <li class="nav_item"><a href="#"><p>Other</p></a></li>
-                        </ul>
-                    </li>
                 </ul>
             </div>
         </section>
-        <section id="featured"><!--reviews and members-->
+
+        <aside id="featured"><!--reviews and members-->
             <div class="section_header"><h2>Featured</h2></div>
             <div class="section_main">
+                <h2>Featured</h2>
+                <h3>Reviews</h3>
                 <ul class="featured_list reviews">
-                    <li><h3>Reviews</h3></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li><a href=""><p>More</p></a></li>
+                    <li class="review_container">
+                        <div class="poster_container"><a href="#"><img src="" alt=""></a></div>
+                        <div class="text_container">
+                            <a href=""><h4>Name</h4></a>
+                            <p class="review_text limited">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta eos tenetur possimus ipsa quae id reprehenderit, reiciendis maxime. Ipsum, illum?</p>
+                        </div>
+                    </li>
+                    <li class="review_container">
+                        <div class="poster_container"><a href="#"><img src="" alt=""></a></div>
+                        <div class="text_container">
+                            <a href=""><h4>Name</h4></a>
+                            <p class="review_text limited">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum!</p>
+                        </div>
+                    </li>
+                    <li class="review_container">
+                        <div class="poster_container"><a href="#"><img src="" alt=""></a></div>
+                        <div class="text_container">
+                            <a href=""><h4>Name</h4></a>
+                            <p class="review_text limited">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi iusto voluptates qui nisi, laborum doloremque provident minus earum natus laudantium aliquam vitae, aliquid cum officia blanditiis totam voluptatum consequuntur quisquam quasi. Dolorem magni, iusto ex totam esse quia error? Eveniet, excepturi, ipsa similique reprehenderit eum dolor debitis omnis alias error totam eius tenetur voluptatum sint! Saepe iste incidunt excepturi veritatis, voluptatum, tempora et accusantium consequuntur nesciunt quos laudantium odio enim voluptate porro aliquam, cumque esse.
+                        </div>
+                    </li>
+                    <li class="review_container">
+                        <div class="poster_container"><a href="#"><img src="" alt=""></a></div>
+                        <div class="text_container">
+                            <a href=""><h4>Name</h4></a>
+                            <p class="review_text limited">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius est esse unde cupiditate in accusamus dolor laborum exercitationem ex odit fuga quisquam ab dolore tempore impedit saepe, iure delectus magnam, provident repudiandae deleniti soluta perspiciatis? Aperiam cumque, repudiandae quidem aspernatur porro consequatur minus quam vel nihil obcaecati reiciendis sapiente illo esse voluptates rerum repellat sint perspiciatis magnam nulla! In, inventore.</p>
+                        </div>
+                    </li>
                 </ul>
-                <ul class="featured_list lists">
-                    <li><h3>Lists</h3></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li><a href=""><p>More</p></a></li>
-                </ul>
+                <div class="nav_item"><a href=""><p>More</p></a></div>
             </div>
-        </section>
+        </aside>
+
         <footer>
             <ul>
                 <li class="nav_item"><a href="about.html"><p>About</p></a></li>
                 <li class="nav_item"><a href="contacts.html"><p>Contacts</p></a></li>
             </ul>
         </footer>
+
     </div>
+
     <script src="js/script.js"></script>
+    
 </body>
+
 </html>
