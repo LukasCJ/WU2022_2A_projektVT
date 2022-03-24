@@ -30,16 +30,14 @@ body {
     --gap-secondary: 1.25rem;
     --gap-third: 2rem;
     --section-width-primary: calc(var(--poster-width-primary)*5 + var(--gap-primary)*4);
+    --section-width-secondary: calc(var(--section-width-primary) - var(--poster-width-primary) - var(--gap-primary));
+    --section-width-third: calc(var(--poster-width-secondary)*4 + var(--gap-primary)*3);
     --scrollbar-width: 0.5rem;
     
     background-color: var(--color-primary); /* bakgrund default */
     overflow-y: scroll;
     overflow-x: hidden;
     font-family: var(--font-primary);
-}
-
-body:hover { 
-    cursor: default; /* gör muspekare vanlig om inte annat bestäms */
 }
 
 a {
@@ -92,7 +90,7 @@ h4 {
 }
 
 .nav_item > a {
-    width: inherit;
+    width: 100%;
     height: 100%;
 }
 
@@ -114,6 +112,7 @@ h4 {
     font-weight: bolder;
     margin: 0 1rem 0 1rem;
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .nav_item:hover, button:hover {
@@ -187,9 +186,8 @@ h4 {
 }
 
 .text_container p {
-    color: var(--color-secondary);
+    color: var(--color-secondary-bright);
     font-family: var(--font-secondary);
-    filter: brightness(0.6) saturate(0.4);
     font-size: 0.75rem;
     letter-spacing: 0.05rem;
     margin-top: var(--gap-primary);
@@ -398,7 +396,7 @@ footer .nav_item:first-child {
 }
 
 
-/* -----BROWSE: CATEGORIES----- */
+/* -----BROWSE GRID----- */
 
 
 #browse_grid_wrapper {
@@ -412,13 +410,16 @@ footer .nav_item:first-child {
     ;
 }
 
+
+/* -----BROWSE: CATEGORIES----- */
+
+
 #categories {
     grid-area: ca;
 }
 
 #browse_grid_wrapper nav {
-    width: 100%;
-    padding: 0 var(--gap-third) 0 var(--gap-third);
+    width: calc(100% - 2*var(--gap-third));
 }
 
 #categories .section_main {
@@ -435,8 +436,6 @@ footer .nav_item:first-child {
 }
 
 .category {
-    width: calc(50% - var(--gap-secondary)/2);
-    height: calc(var(--poster-width-primary)*1.5);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -448,9 +447,14 @@ footer .nav_item:first-child {
     overflow: hidden;
 }
 
-.category.games, .category.all {
+.category.movies, .category.series {
+    width: calc(50% - var(--gap-secondary)/2);
+    height: calc(var(--poster-width-primary)*1.5);
+}
+
+.category.all, .category.games {
     width: 100%;
-    height: var(--poster-width-secondary);;
+    height: var(--poster-width-secondary);
 }
 
 .category_full {
@@ -580,6 +584,21 @@ button p {
 
 @media screen and (max-width: 50rem) {
 
+    /* -----ASSETS (2)----- */
+
+    .nav_item {
+        width: 100%;
+        height: 3rem;
+        border-radius: 0px;
+    }
+
+    .nav_item p {
+        font-size: 1.3rem;
+        letter-spacing: 0.3rem;
+    }
+    
+    /* -----HEADER & NAV-MENU (2)----- */
+
     #nav_op, #nav_close {
         display: flex;
     }
@@ -590,29 +609,19 @@ button p {
 
     nav {
         width: 100%;
+        height: 100vh;
         position: fixed;
         top: -100vh;
-        height: 100vh;
         flex-direction: column;
-        align-items: center;
         background-image: var(--color-gradient-secondary);
         border-bottom: 1px solid var(--color-secondary);
     }
 
-    .nav_item, button {
-        width: 100%;
-        height: 3rem;
-        border-radius: 0px;
+    nav .nav_item {
         margin: 0;
     }
 
-    .nav_item p, button p {
-        font-size: 1.3rem;
-        letter-spacing: 0.3rem;
-    }
-
     nav ul {
-        width: 100%;
         height: 100%;
         flex-direction: column;
         justify-content: space-evenly;
@@ -623,13 +632,32 @@ button p {
         margin-top: 1rem;
     }
 
-    .content_list, .review_list, #popular_reviews .nav_item {
-        width: calc(var(--section-width-primary) - var(--poster-width-primary) - var(--gap-primary));
+    .nav-active {
+        transform: translateY(100vh);
     }
 
+    /* -----POPULAR, RECENT ACTIVITY & POPULAR REVIEWS (2)----- */
+
+    .content_list, .review_list, #popular_reviews .nav_item {
+        width: var(--section-width-secondary);
+    }
+    
     #popular_reviews .nav_item {
         border-radius: var(--border-radius);
     }
+
+    /* -----FOOTER (2)----- */
+
+    footer .nav_item {
+        width: 50%;
+        clip-path: inset(-10px 0 -10px 0); /* tar bort box-shadow på sidorna */
+    }
+
+    footer .nav_item:first-child {
+        margin: 0;
+    }
+
+    /* -----BROWSE (2)----- */
 
     #browse_grid_wrapper {
         grid-template-columns: 100%;
@@ -641,32 +669,28 @@ button p {
             "fo"
     }
 
+    #browse_grid_wrapper nav {
+        width: 100%; /* varför räcker det inte att skriva width: 100% på endast 'nav' ovan? varför överskriver inte det alla nav-taggar när det stå längst ner? */
+    }
+
+    .category .nav_item {
+        width: 12rem;
+        height: 2.4rem;
+        border-radius: var(--border-radius);
+    }
+
+    .category .nav_item p {
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+    }
+
     #featured .section_main {
         border-left: none;
         background-image: var(--color-gradient-primary);
         padding: 0 var(--gap-third) 0 var(--gap-third);
     }
-    
-    .featured_list {
-        height: max-content;
-        background-color: transparent;
-        overflow-y: auto;
-        scroll-snap-type: none;
-        margin: 0;
-        padding: 0;
-        border-radius: none;
-        border: none;
-    }
 
-    .featured_list .review_container {
-        margin-bottom: var(--gap-secondary);
-    }
-    
-    .featured_list .review_container:last-child {
-        margin-bottom: 0;
-    }
-
-    #featured .section_main > h3 {
+    #featured h3 {
         margin: var(--gap-secondary) 0 var(--gap-secondary) 0;
     }
 
@@ -674,22 +698,25 @@ button p {
         margin: var(--gap-secondary) 0 var(--gap-third) 0;
         border-radius: var(--border-radius);
     }
-
-    footer .nav_item {
-        width: 50%;  
-        clip-path: inset(-10px 0 -10px 0); /* tar bort box-shadow på sidorna */
+    
+    .featured_list {
+        height: max-content;
+        
+        margin: 0;
+        padding: 0;
+        background-color: initial;
+        overflow-y: initial;
+        scroll-snap-type: initial;
+        border-radius: initial;
+        border: initial;
     }
 
-    footer .nav_item:first-child {
-        margin-right: 0;
+    .featured_list .review_container {
+        margin-bottom: var(--gap-secondary);
     }
 
-    footer .nav_item a {
-        width: 100%;
-    }
-
-    .nav-active {
-        transform: translateY(100vh);
+    .featured_list .review_container:last-child {
+        margin-bottom: 0;
     }
 
 }
@@ -700,17 +727,19 @@ button p {
 
 @media screen and (max-width: 40rem) {
 
+    /* -----POPULAR & RECENT ACTIVITY (3)----- */
+
     .content_list, .review_list, #popular_reviews .nav_item {
-        width: calc(var(--poster-width-secondary)*4 + var(--gap-primary)*3);
+        width: var(--section-width-third);
     }
 
     .content_list {  
-        height: calc(2*var(--gap-secondary) + 3*1.5*var(--poster-width-secondary) + 2*var(--gap-primary));
+        height: calc(2*var(--gap-secondary) + 4.5*var(--poster-width-secondary) + 2*var(--gap-primary));
         justify-content: space-between;
         padding: var(--gap-secondary) 0 var(--gap-secondary) 0;
         flex-wrap: wrap;
         flex: none;
-        overflow-x: hidden;
+        overflow: hidden;
     }
 
     .content_list .poster_container {
@@ -719,28 +748,59 @@ button p {
         margin: 0 0 var(--gap-primary) 0;
     }
 
-    .content_list li:nth-child(n+12):nth-child(-n+14) {
+    .content_list .poster_container:nth-child(n+12):nth-child(-n+14) { /* tar bort poster 12 till 14. totalt 12st istället för 15 */
         display: none;
-    }
-
-    .poster_container.final h4 {
-        font-size: 1.5rem;
     }
 
     .poster_container.final p {
         font-size: 0.75rem;
     }
 
-    .review_list {
-        flex-wrap: wrap;
+    .poster_container.final .sm-plus {
+        font-size: 1.5rem;
     }
 
-    .review_container {
+    /* -----POPULAR REVIEWS (3)----- */
+
+    .review_list {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    #popular_reviews .review_container {
         width: 100%;
     }
 
-    .review_list li:last-child {
+    .review_list .review_container:last-child {
         display: none;
+    }
+
+    /* BROWSE (3) */
+
+    .category_list {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .category .nav_item {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .category {
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+    }
+
+    .category.movies {
+        border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        border-right: 1px solid var(--color-secondary);
+    }
+
+    .category.series {
+        border-radius: var(--border-radius) 0 0 var(--border-radius);
+        border-left: 1px solid var(--color-secondary);
     }
 
 }
