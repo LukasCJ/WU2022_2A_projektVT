@@ -268,7 +268,6 @@ nav {
     width: var(--section-width-primary);
     display: flex;
     align-items: center;
-    transition: all ease 0.5s;
 }
 
 nav .nav_item {
@@ -615,6 +614,7 @@ button p {
         flex-direction: column;
         background-image: var(--color-gradient-secondary);
         border-bottom: 1px solid var(--color-secondary);
+        transition: all ease 0.5s;
     }
 
     nav .nav_item {
