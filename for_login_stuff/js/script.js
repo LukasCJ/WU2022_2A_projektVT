@@ -18,22 +18,16 @@ nav_op.addEventListener('click', openNav);
 nav_close.addEventListener('click', closeNav);
 
 
-const cat_full_vid = document.getElementById('category_full-video');
-const cat_full_mu = document.getElementById('category_full-music');
-const cat_full_bks = document.getElementById('category_full-books');
+const cat_full_mov = document.getElementById('category_full-movies');
+const cat_full_ser = document.getElementById('category_full-series');
 
-function openSubsVid() {
-    cat_full_vid.classList.toggle('subcategory-active');
+function openSubsMov() {
+    cat_full_mov.classList.toggle('subcategory-active');
 }
 
-function openSubsMu() {
-    cat_full_mu.classList.toggle('subcategory-active');
+function openSubsSer() {
+    cat_full_ser.classList.toggle('subcategory-active');
 }
 
-function openSubsBks() {
-    cat_full_bks.classList.toggle('subcategory-active');
-}
-
-cat_full_vid.addEventListener('click', openSubsVid);
-cat_full_mu.addEventListener('click', openSubsMu);
-cat_full_bks.addEventListener('click', openSubsBks);
+cat_full_mov.addEventListener('click', openSubsMov);
+cat_full_ser.addEventListener('click', openSubsSer);

@@ -5,6 +5,9 @@
             </ul>
         </footer>
     </div>
-    <script src="C:\Users\lukas.johansson16\Documents\GitHub\WU2022_2A_projektVT\js\script.js"></script>
+
+    <script src="js/script.js"></script>
+
 </body>
+
 </html>

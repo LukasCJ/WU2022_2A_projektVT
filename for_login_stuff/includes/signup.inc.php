@@ -1,12 +1,12 @@
 <?php
 
-if (isset($_POST["submit"])) { //check if signup method is correct
+if (isset($_POST["submit"])) {
     
     $name = $_POST["name"];
     $email = $_POST["email"];
     $username = $_POST["uid"];
     $pwd = $_POST["pwd"];
-    $pwdRe = $_POST["pwdre"];
+    $pwdRe = $_POST["pwdrepeat"];
 
     require_once 'dbh.inc.php';
     require_once 'functions.inc.php';
@@ -27,7 +27,7 @@ if (isset($_POST["submit"])) { //check if signup method is correct
         header("location: ../signup.php?error=differentpasswords");
         exit();
     }
-    if (uidExists($conn, $username) !== false) {
+    if (uidExists($conn, $username, $email) !== false) {
         header("location: ../signup.php?error=usernametaken");
         exit();
     }
