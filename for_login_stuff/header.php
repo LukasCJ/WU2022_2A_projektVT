@@ -20,7 +20,7 @@
         <header>
             <div class="nav_item linkless" id="nav_op"><p>Open Menu</p></div>
             <nav>
-                <a href="index.html" id="nav_logo"><img src="img/logo.jpg" alt="website logo"></a>
+                <a href="index.html" id="nav_logo"><img src="img/logo.png" alt="website logo"></a>
                 <ul>
                     <li class="nav_item"><a href="#"><p>Log</p></a></li>
                     <li class="nav_item"><a href="#"><p>Browse</p></a></li>

@@ -1,5 +1,4 @@
-
-/* GENERAL */
+/* -----GENERAL----- */
 
 * {
     margin: 0px;
@@ -15,9 +14,6 @@ body {
     --color-secondary-bright: #feef67;
     --color-gradient-primary: linear-gradient(to right, var(--color-primary-dark), var(--color-primary), var(--color-primary), var(--color-primary), var(--color-primary-dark));
     --color-gradient-secondary: linear-gradient(180deg, var(--color-primary), var(--color-primary), var(--color-primary-dark));
-    
-    --box-shadow-primary: rgba(0, 0, 0, 0.5) 0px 0px 15px;
-    --box-shadow-secondary: rgba(0, 0, 0, 0.2) 0px 4px 12px;
     
     --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --font-secondary: Cambria, Georgia, serif;
@@ -55,7 +51,7 @@ section {
 
 h2, h3, h4, .section_header p, .poster_container.final p {
     color: var(--color-secondary);
-    white-space: nowrap; /* gör att rubrik-taggar inte byter rad */
+    white-space: nowrap; /* gör att texten inte byter rad */
 }
 
 h2 {
@@ -80,12 +76,24 @@ h4 {
 
 /* --BUTTON-- */
 .nav_item {
-    width: max-content;
     height: var(--button-height);
+    width: max-content;
+    overflow: hidden;
 }
 
-.nav_item p {
+.nav_item, button {
+    background-color: var(--color-secondary);
+    border-radius: var(--border-radius);
+    transition: background-color ease 0.2s;
+}
+
+.nav_item p, button p {
     font-size: calc(var(--button-height)*0.5);
+    color: var(--color-primary);
+    font-weight: bolder;
+    margin: 0 1rem 0 1rem;
+    text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .nav_item > a {
@@ -97,21 +105,6 @@ h4 {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.nav_item, button {
-    background-color: var(--color-secondary);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow-secondary);
-    transition: background-color ease 0.2s;
-}
-
-.nav_item p, button p {
-    color: var(--color-primary);
-    font-weight: bolder;
-    margin: 0 1rem 0 1rem;
-    text-transform: uppercase;
-    white-space: nowrap;
 }
 
 .nav_item:hover, button:hover {
@@ -141,7 +134,6 @@ h4 {
     min-height: auto;
     max-height: 100%; 
     border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow-secondary);
     border: 1px solid rgba(0, 0, 0, 0);
     transition: border ease 0.3s;
 }
@@ -153,13 +145,12 @@ h4 {
 /* --REVIEW CONTAINER-- */
 .review_container {
     width: 26rem;
-    height: 12rem;
+    height: max-content;
     display: flex;
     align-items: center;
     border-radius: var(--border-radius);
     background-color: var(--color-primary);    
     border: 1px solid var(--color-secondary);
-    box-shadow: var(--box-shadow-secondary);
     padding: var(--gap-secondary) 0.75rem var(--gap-secondary) 0.75rem;
 }
 
@@ -211,13 +202,13 @@ h4 {
     flex-direction: column;
     align-items: center;
     background-image: var(--color-gradient-primary);
+    padding: var(--gap-third) 0 var(--gap-third) 0;
 }
 
 .content_list {
     height: max-content;
     display: flex;
     align-items: center;
-    padding: var(--gap-third) 0 var(--gap-third) 0;
 }
 
 /* --SCROLLBAR-- */
@@ -246,12 +237,13 @@ h4 {
 #grid_wrapper {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: repeat(5, max-content);
+    grid-template-rows: repeat(6, max-content);
     grid-template-areas: 
         "he"
         "s1"
         "s2"
         "s3"
+        "s4"
         "fo"
     ;
 }
@@ -279,12 +271,13 @@ nav .nav_item {
 }
 
 #nav_logo {
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    background-color: var(--color-secondary);
     display: flex;
     flex: none;
+}
+
+#nav_logo img {
+    width: 3.5rem;
+    object-fit: contain;
 }
 
 nav ul {
@@ -295,6 +288,11 @@ nav ul {
 
 #nav_op, #nav_close {
     display: none;
+}
+
+#nav_op {
+    width: 100%;
+    border-radius: 0px;
 }
 
 
@@ -309,11 +307,15 @@ nav ul {
     grid-area: s2;
 }
 
+#popular .section_main, #recent .section_main {
+    padding: 0;
+}
+
 .content_list.posters { /* varför randomizas scroll-positionen vid omladdningar ibland? */
     width: var(--section-width);
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-    padding-bottom: calc(var(--gap-third) - var(--scrollbar-width));
+    padding: var(--gap-third) 0 calc(var(--gap-third) - var(--scrollbar-width)) 0;
 }
 
 .content_list.posters .poster_container {
@@ -330,6 +332,12 @@ nav ul {
     border-radius: calc(var(--scrollbar-width)/2) calc(var(--scrollbar-width)/2) 0rem 0rem;
 }
 
+.poster_container.final {
+    background-color: var(--color-primary-dark);
+    border: 1px solid rgba(0, 0, 0, 0);
+    transition: border ease 0.3s;
+}
+
 .poster_container.final p {
     text-transform: uppercase;
 }
@@ -338,6 +346,10 @@ nav ul {
     font-family: var(--font-third);
     font-size: 1.8rem;
     margin-bottom: 0.3rem;
+}
+
+.poster_container.final:hover {
+    border: 1px solid var(--color-secondary);
 }
 
 
@@ -352,16 +364,10 @@ nav ul {
     width: var(--section-width);
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-start;
-    padding-top: var(--gap-secondary);
 }
 
 #popular_reviews .review_container {
     width: calc(50% - var(--gap-secondary)/2);
-    margin-bottom: var(--gap-secondary);
-}
-
-#popular_reviews .nav_item {
     margin-bottom: var(--gap-secondary);
 }
 
@@ -415,25 +421,22 @@ footer .nav_item:first-child {
     grid-area: ca;
 }
 
-#categories .section_main {
+#browse_grid_wrapper .section_main {
     height: 100%;
 }
 
 #categories .content_list {
-    width: 100%;
+    width: calc(100% - var(--gap-third)*2);
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-bottom: calc(var(--gap-third) - var(--gap-secondary));
 }
 
 .category {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: var(--gap-secondary);
     background-color: var(--color-primary);
     border: 1px solid var(--color-secondary);
-    box-shadow: var(--box-shadow-secondary);
     border-radius: var(--border-radius);
     overflow: hidden;
 }
@@ -441,6 +444,7 @@ footer .nav_item:first-child {
 .category.movies, .category.series {
     width: calc(50% - var(--gap-secondary)/2);
     height: calc(var(--poster-width-primary)*1.5);
+    margin: var(--gap-secondary) 0 var(--gap-secondary) 0;
 }
 
 .category.all, .category.games {
@@ -486,27 +490,18 @@ footer .nav_item:first-child {
 }
 
 #featured .section_main {
-    height: 100%;
     background-image: none;
     border-left: 1px solid var(--color-secondary);
-}
-
-#featured h3 {
-    margin: var(--gap-primary) 0 var(--gap-primary) 0;
-}
-
-#featured .nav_item {
-    margin-top: var(--gap-primary);
+    padding: var(--gap-third) var(--gap-primary) 0 var(--gap-primary);
 }
 
 #featured .content_list {
-    height: 26rem;
+    height: calc(1.5*var(--poster-width-primary) + 2*var(--poster-width-secondary) + 2*var(--gap-secondary));
     flex-direction: column;
     background-color: var(--color-primary-dark);
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
-    margin: 0 var(--gap-primary) 0 var(--gap-primary);
-    padding: var(--gap-primary);
+    padding: var(--gap-primary) var(--gap-primary) var(--gap-primary) var(--gap-primary);
     border-radius: var(--border-radius);
     border: 1px solid var(--color-secondary);
 }
@@ -520,6 +515,10 @@ footer .nav_item:first-child {
 
 #featured .review_container:last-child {
     margin-bottom: 0;
+}
+
+#featured .nav_item {
+    margin: var(--gap-primary) 0 var(--gap-primary) 0;
 }
 
 
@@ -536,14 +535,12 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: var(--gap-secondary) 0 var(--gap-secondary) 0;
 }
 
 input, button {
-    height: 2rem;
-    width: 16rem;
+    width: calc(0.6*var(--section-width));
+    height: 2.8rem;
     border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow-secondary);
     border: none;
 }
 
@@ -551,7 +548,7 @@ input {
     background-color: var(--color-primary-bright);
     text-decoration-color: var(--color-primary);
     padding: 0 var(--gap-primary) 0 var(--gap-primary);
-    margin-bottom: var(--gap-primary);
+    margin-bottom: var(--gap-secondary);
 }
 
 input:focus {
@@ -568,8 +565,90 @@ button p {
 }
 
 
-/* -----SCREEN-SIZE 2----- */
+/* -----PROFILE----- */
 
+
+#profile_intro {
+    grid-area: s1;
+}
+
+#profile_featured-posters {
+    grid-area: s2;
+}
+
+#profile_featured-reviews {
+    grid-area: s3;
+}
+
+#stats {
+    grid-area: s4;
+}
+
+.profile_pic-big {
+    width: calc(var(--poster-width-primary)*2);
+    border: 1px solid var(--color-secondary);
+    border-radius: 50%;
+    margin-bottom: var(--gap-primary);
+}
+
+#profile_intro .text_container {
+    width: var(--section-width);
+    text-align: center;
+}
+
+#profile_featured-posters .content_list {
+    width: var(--section-width);
+    justify-content: space-between;
+}
+
+#profile_featured-posters .poster_container {
+    margin-bottom: var(--gap-primary);
+}
+
+#profile_featured-reviews .content_list {
+    width: var(--section-width);
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#profile_featured-reviews .review_container {
+    width: calc(50% - var(--gap-secondary)/2);
+    margin-bottom: var(--gap-secondary);
+}
+
+#stats .content_list {
+    width: var(--section-width);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.stat {
+    width: calc(var(--section-width)/3 - 2*var(--gap-primary)/3);
+    height: var(--poster-width-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid var(--color-secondary);
+    border-radius: var(--border-radius);
+    background-color: var(--color-primary);
+}
+
+.stat p {
+    margin-top: var(--gap-primary);
+    color: var(--color-secondary);
+}
+
+#stats .stat:nth-child(1), #stats .stat:nth-child(2), #stats .stat:nth-child(4) {
+    margin-right: var(--gap-primary);
+}
+
+#stats .stat:nth-child(1), #stats .stat:nth-child(2), #stats .stat:nth-child(3) {
+    margin-bottom: var(--gap-primary);
+}
+
+
+/* -----SCREEN-SIZE 2----- */
 
 @media screen and (max-width: 50rem) {
     
@@ -583,8 +662,7 @@ button p {
     /* -----ASSETS (2)----- */
 
     .nav_item {
-        width: 100%;
-        border-radius: 0px;
+        width: var(--section-width);
     }
 
     .nav_item p {
@@ -613,8 +691,6 @@ button p {
     }
 
     nav .nav_item {
-        width: calc(100% - var(--gap-third));
-        border-radius: var(--border-radius);
         margin: 0 0 var(--gap-third) 0;
     }
 
@@ -639,16 +715,17 @@ button p {
     #popular_reviews .nav_item {
         width: var(--section-width);
     }
-    
-    #popular_reviews .nav_item {
-        border-radius: var(--border-radius);
+
+    #popular_reviews .review_container {
+        width: calc(50% - var(--gap-primary)/2);
+        margin-bottom: var(--gap-primary);
     }
 
     /* -----FOOTER (2)----- */
 
     footer .nav_item {
         width: 50%;
-        clip-path: inset(-10px 0 -10px 0); /* tar bort box-shadow på sidorna */
+        border-radius: 0;
     }
 
     footer .nav_item:first-child {
@@ -668,12 +745,22 @@ button p {
     }
 
     #browse_grid_wrapper nav {
-        width: 100%; /* varför räcker det inte att skriva width: 100% på endast 'nav' ovan? varför överskriver inte det alla nav-taggar när det stå längst ner? */
+        width: 100%;
+    }
+
+    #categories .content_list, #featured .content_list {
+        width: var(--section-width);
+        padding: 0;
+    }
+
+    .category.movies, .category.series {
+        width: calc(50% - var(--gap-primary)/2);
+        margin: var(--gap-primary) 0 var(--gap-primary) 0;
     }
 
     .category .nav_item {
         width: 12rem;
-        height: 2.4rem;
+        height: calc(0.9*var(--button-height));
         border-radius: var(--border-radius);
     }
 
@@ -685,23 +772,13 @@ button p {
     #featured .section_main {
         border-left: none;
         background-image: var(--color-gradient-primary);
-        padding: var(--gap-third);
-    }
-
-    #featured h3 {
-        margin: var(--gap-secondary) 0 var(--gap-secondary) 0;
-    }
-
-    #featured .nav_item {
-        margin-top: var(--gap-secondary);
-        border-radius: var(--border-radius);
+        padding: var(--gap-third) 0 var(--gap-third) 0;
     }
     
-    .featured_list {
+    #featured .content_list {
+        width: var(--section-width);
         height: max-content;
-        
         margin: 0;
-        padding: 0;
         background-color: initial;
         overflow-y: initial;
         scroll-snap-type: initial;
@@ -709,19 +786,36 @@ button p {
         border: initial;
     }
 
-    .featured_list .review_container {
-        margin-bottom: var(--gap-secondary);
+    #featured .nav_item {
+        margin: var(--gap-primary) 0 0 0;
     }
 
-    .featured_list .review_container:last-child {
-        margin-bottom: 0;
+    /* -----PROFILE (2)----- */
+
+    #profile_featured-posters .content_list {
+        width: calc(var(--poster-width-primary)*3 + var(--gap-primary)*2);
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #profile_featured-posters .poster_container:nth-child(1), #profile_featured-posters .poster_container:nth-child(2), #profile_featured-posters .poster_container:nth-child(4) {
+        margin-right: var(--gap-primary);
+    }
+
+    #profile_featured-posters .nav_item {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    #profile_featured-reviews .review_container {
+        width: calc(50% - var(--gap-primary)/2);
+        margin-bottom: var(--gap-primary);
     }
 
 }
 
 
 /* -----SCREEN-SIZE 3----- */
-
 
 @media screen and (max-width: 40rem) {
 
@@ -731,24 +825,34 @@ button p {
         --section-width: calc(var(--poster-width-secondary)*4 + var(--gap-primary)*3);
     }
 
+    /* -----ASSETS (3)----- */
+
+    header {
+        height: max-content;
+    }
+
+    header, .section_main, #popular .section_main, #recent .section_main, #featured .section_main {
+        padding: var(--gap-secondary) 0 var(--gap-secondary) 0;
+    }
+
     /* -----POPULAR & RECENT ACTIVITY (3)----- */
 
-    .content_list {  
-        height: calc(2*var(--gap-secondary) + 4.5*var(--poster-width-secondary) + 2*var(--gap-primary));
+    .content_list.posters {  
+        height: calc(4.5*var(--poster-width-secondary) + 2*var(--gap-primary));
         justify-content: space-between;
-        padding: var(--gap-secondary) 0 var(--gap-secondary) 0;
+        padding: 0;
         flex-wrap: wrap;
         flex: none;
         overflow: hidden;
     }
 
-    .content_list .poster_container {
+    .content_list.posters .poster_container {
         width: var(--poster-width-secondary);
         height: calc(var(--poster-width-secondary) * 1.5);
         margin: 0 0 var(--gap-primary) 0;
     }
 
-    .content_list .poster_container:nth-child(n+12):nth-child(-n+14) { /* tar bort poster 12 till 14. totalt 12st istället för 15 */
+    .content_list.posters .poster_container:nth-child(n+12):nth-child(-n+14) { /* tar bort poster 12 till 14. totalt 12st istället för 15 */
         display: none;
     }
 
@@ -762,13 +866,14 @@ button p {
 
     /* -----POPULAR REVIEWS (3)----- */
 
-    .review_list {
+    #popular_reviews .content_list {
         flex-direction: column;
         flex-wrap: nowrap;
     }
 
     #popular_reviews .review_container {
         width: 100%;
+        margin-bottom: var(--gap-primary);
     }
 
     .review_list .review_container:last-child {
@@ -777,7 +882,8 @@ button p {
 
     /* BROWSE (3) */
 
-    .category_list {
+    #categories .content_list {
+        width: 100%;
         padding-left: 0;
         padding-right: 0;
     }
@@ -803,6 +909,36 @@ button p {
         border-left: 1px solid var(--color-secondary);
     }
 
+    /* -----PROFILE (3)----- */
+
+    #profile_featured-posters .content_list {
+        width: calc(var(--poster-width-secondary)*3 + var(--gap-primary)*2);;
+    }
+
+    #profile_featured-posters .poster_container {
+        width: var(--poster-width-secondary);
+        height: calc(var(--poster-width-secondary)*1.5);
+    }
+
+    #profile_featured-reviews .content_list {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    #profile_featured-reviews .review_container {
+        width: 100%;
+        margin-bottom: var(--gap-primary);
+    }
+
+    #stats .content_list > .stat {
+        width: 100%;
+        margin: 0 0 var(--gap-primary) 0;
+    }
+
+    #stats .stat:last-child {
+        margin: 0;
+    }
+
 }
 
 
@@ -810,7 +946,7 @@ button p {
 
 @media screen and (max-width: 30rem) {
 
-    /* -----VARIABLE CHANGES (4)----- */
+    /* -----VARIABLE CHANGES & GENERAL (4)----- */
 
     body {
         --poster-width-secondary: 4.8rem;
@@ -822,6 +958,8 @@ button p {
         letter-spacing: 0.25rem;
     }
 
+    /* -----ASSETS (4)----- */
+
     .section_header {
         height: 4rem;
     }
@@ -831,6 +969,8 @@ button p {
         text-transform: uppercase;
         letter-spacing: 0.1rem;
     }
+
+    /* -----POPULAR & RECENT ACTIVITY (4)----- */
 
     .poster_container.final p {
         font-size: 0.65rem;
@@ -844,36 +984,19 @@ button p {
         margin-bottom: var(--gap-primary);
     }
 
-    .category_list {
-        padding-bottom: 0;
-        padding-top: var(--gap-secondary);
-        padding-bottom: calc(var(--gap-secondary) - var(--gap-primary));
-    }
-
-    .category {
-        margin-bottom: var(--gap-primary);
-    }
+    /* -----BROWSE (4)----- */
 
     .category h3 {
-                font-size: 0.85rem;
+        font-size: 0.85rem;
         text-transform: uppercase;
         letter-spacing: 0.1rem;
     }
 
-    .category.movies, .category.series {
-        width: calc(50% - var(--gap-primary)/2);
-    }
+    /* -----PROFILE (3)----- */
 
-    #featured .section_main {
-        padding: var(--gap-secondary) var(--gap-third) var(--gap-secondary) var(--gap-third);
-    }
-
-    .featured_list .review_container {
-        margin-bottom: var(--gap-primary);
-    }
-
-    #featured .nav_item {
-        margin-top: var(--gap-primary);
+    #profile_featured-reviews .nav_item {
+        width: 100%;
+        border-radius: 0;
     }
 
 }
