@@ -585,7 +585,7 @@ button p {
 }
 
 .profile_pic-big {
-    width: calc(var(--poster-width-primary)*2);
+    width: calc(var(--poster-width-secondary)*2);
     border: 1px solid var(--color-secondary);
     border-radius: 50%;
     margin-bottom: var(--gap-primary);
@@ -639,12 +639,12 @@ button p {
     color: var(--color-secondary);
 }
 
-#stats .stat:nth-child(1), #stats .stat:nth-child(2), #stats .stat:nth-child(4) {
-    margin-right: var(--gap-primary);
+#stats .stat.top {
+    margin-bottom: var(--gap-primary);
 }
 
-#stats .stat:nth-child(1), #stats .stat:nth-child(2), #stats .stat:nth-child(3) {
-    margin-bottom: var(--gap-primary);
+#stats .stat.margin {
+    margin-right: var(--gap-primary);
 }
 
 
@@ -798,7 +798,7 @@ button p {
         flex-wrap: wrap;
     }
 
-    #profile_featured-posters .poster_container:nth-child(1), #profile_featured-posters .poster_container:nth-child(2), #profile_featured-posters .poster_container:nth-child(4) {
+    #profile_featured-posters .poster_container.margin {
         margin-right: var(--gap-primary);
     }
 
@@ -852,7 +852,7 @@ button p {
         margin: 0 0 var(--gap-primary) 0;
     }
 
-    .content_list.posters .poster_container:nth-child(n+12):nth-child(-n+14) { /* tar bort poster 12 till 14. totalt 12st istället för 15 */
+    .content_list.posters .poster_container.hide {
         display: none;
     }
 
@@ -949,7 +949,7 @@ button p {
     /* -----VARIABLE CHANGES & GENERAL (4)----- */
 
     body {
-        --poster-width-secondary: 4.8rem;
+        --poster-width-secondary: 4.75rem;
     }
 
     h2 {
