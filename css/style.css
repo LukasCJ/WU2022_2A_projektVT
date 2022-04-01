@@ -17,7 +17,6 @@ body {
     
     --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --font-secondary: Cambria, Georgia, serif;
-    --font-third: 'Zen Kaku Gothic New', Tahoma, Geneva, Verdana, sans-serif;
     
     --border-radius: 3px;
     --poster-width-primary: 8.8rem;
@@ -129,9 +128,7 @@ h4 {
 }
 
 .poster_container img {
-    min-width: auto;
     max-width: 100%;
-    min-height: auto;
     max-height: 100%; 
     border-radius: var(--border-radius);
     border: 1px solid rgba(0, 0, 0, 0);
@@ -343,7 +340,6 @@ nav ul {
 }
 
 .poster_container.final .sm-plus {
-    font-family: var(--font-third);
     font-size: 1.8rem;
     margin-bottom: 0.3rem;
 }
