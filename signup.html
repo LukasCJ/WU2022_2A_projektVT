@@ -19,9 +19,8 @@
                 <ul>
                     <li class="nav_item"><a href="#"><p>Log</p></a></li>
                     <li class="nav_item"><a href="browse.html"><p>Browse</p></a></li>
-                    <li class="nav_item"><a href="profile.html"><p>Profile</p></a></li> <!--supposed to be hidden when not logged in-->
-                    <li class="nav_item"><a href="signup.html"><p>Sign up</p></a></li> <!--supposed to be hidden when logged in-->
-                    <li class="nav_item"><a href="login.html"><p>Log in</p></a></li> <!--supposed to be hidden when logged in-->
+                    <li class="nav_item"><a href="profile.html"><p>Profile</p></a></li>
+                    <li class="nav_item"><a href="login.html"><p>Log in</p></a></li>
                     <li class="nav_item linkless" id="nav_close"><p>Close Menu</p></li>
                 </ul>
             </nav>
@@ -30,6 +29,10 @@
         <section id="signup_form">
             <div class="section_header"><h2>Sign Up</h2></div>
             <div class="section_main">
+                <ul id="form_choice">
+                    <li class="nav_item"><a href="login.html"><p>Log in</p></a></li>
+                    <li class="nav_item"><a href="signup.html"><p>Sign up</p></a></li>
+                </ul>
                 <form action="includes/signup.inc.php" method="post">
                     <input type="text" name="name" placeholder="Full Name...">
                     <input type="text" name="email" placeholder="Email..">

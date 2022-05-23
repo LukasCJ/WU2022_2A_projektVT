@@ -48,7 +48,16 @@ section {
     align-items: center;
 }
 
-h2, h3, h4, .section_header p, .poster_container.final p {
+h1 {
+    color: var(--color-secondary);
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.2rem;
+    margin-left: 1rem;
+}
+
+h2, h3, h4, p {
     color: var(--color-secondary);
     white-space: nowrap; /* gör att texten inte byter rad */
 }
@@ -111,6 +120,11 @@ h4 {
     cursor: pointer;
 }
 
+#nav_logo {
+    display: flex;
+    align-items: center;
+}
+
 /* --POSTER CONTAINER-- */
 .poster_container {
     width: var(--poster-width-primary);
@@ -125,6 +139,10 @@ h4 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.poster_container.final {
+    border-radius: var(--border-radius);
 }
 
 .poster_container img {
@@ -170,6 +188,7 @@ h4 {
     font-size: 0.75rem;
     letter-spacing: 0.05rem;
     margin-top: var(--gap-primary);
+    white-space: normal;
 }
 
 /* --SECTION HEADER-- */
@@ -525,6 +544,15 @@ footer .nav_item:first-child {
     grid-area: s1;
 }
 
+#form_choice {
+    display: flex;
+    margin-bottom: var(--gap-secondary);
+}
+
+#form_choice .nav_item:first-child {
+    margin: 0 var(--gap-primary) 0 0;
+}
+
 form {
     width: 100%;
     height: max-content;
@@ -719,13 +747,17 @@ button p {
 
     /* -----FOOTER (2)----- */
 
-    footer .nav_item {
+    footer .nav_item, #form_choice .nav_item {
         width: 50%;
         border-radius: 0;
     }
 
-    footer .nav_item:first-child {
+    footer .nav_item:first-child, #form_choice .nav_item:first-child {
         margin: 0;
+    }
+
+    #form_choice {
+        width: 100%;
     }
 
     /* -----BROWSE (2)----- */
