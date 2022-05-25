@@ -986,6 +986,12 @@ button p {
         letter-spacing: 0.25rem;
     }
 
+    h3 {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+    }
+
     /* -----ASSETS (4)----- */
 
     .section_header {
@@ -1010,14 +1016,6 @@ button p {
 
     #popular_reviews .review_container {
         margin-bottom: var(--gap-primary);
-    }
-
-    /* -----BROWSE (4)----- */
-
-    .category h3 {
-        font-size: 0.85rem;
-        text-transform: uppercase;
-        letter-spacing: 0.1rem;
     }
 
     /* -----PROFILE (3)----- */
