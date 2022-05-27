@@ -187,6 +187,11 @@ h3 {
     white-space: normal;
 }
 
+.reviewer_name p {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
 /* --SECTION HEADER-- */
 .section_header {
     width: 100%;
